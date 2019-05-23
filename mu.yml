@@ -9,3 +9,8 @@ service:
   environment:
     CRYSTAL_URL: "http://ecsdemo-crystal/crystal"
     NODEJS_URL: "http://ecsdemo-nodejs/"
+    SPRING_DATASOURCE_USERNAME: ${DatabaseMasterUsername}
+    SPRING_DATASOURCE_PASSWORD: ${DatabaseMasterPassword}
+    SPRING_DATASOURCE_URL: jdbc:mysql://${DatabaseEndpointAddress}:${DatabaseEndpointPort}/${DatabaseName}
+  database:
+    name: sample
